@@ -1,5 +1,6 @@
 const http = require("http");
 const fs = require("fs");
+const port =process.pnv.PORT;
 var requests = require("requests");
 
 const homeFile= fs.readFileSync("home.html","utf-8");
@@ -35,4 +36,4 @@ const server=http.createServer((req,res)=>{
         });
      }
 });
-server.listen(8000,"127.0.0.1");
+server.listen(port);
